@@ -4,8 +4,8 @@ class Recipe
   def initialize(attributes)
     @id = nil
     @type = "recipe"
-    @title = attributes[:label]
-    @url = attributes[:url]
-    @image = attributes[:image]
+    @title = attributes[:recipe][:label]
+    @url = attributes[:recipe][:url]
+    @image = attributes[:recipe][:image]
   end
 end
