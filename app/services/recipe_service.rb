@@ -1,8 +1,10 @@
 class RecipeService
 
   def get_recipes_by_country(country)
-    get_url("api/v1/recipes/type=public&q=#{country}")    
+    get_url("/api/recipes/v2", { q: country, type: "public" } )    
   end
+
+  private
 
   def conn
     Faraday.new(url: 'https://api.edamam.com/') do |faraday|
@@ -12,7 +14,7 @@ class RecipeService
   end
 
   def get_url(url, params = {})
-    response = conn.get(url)
+    response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
   end
 end

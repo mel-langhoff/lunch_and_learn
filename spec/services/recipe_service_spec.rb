@@ -8,23 +8,19 @@ RSpec.describe RecipeService do
     expect(service).to be_an_instance_of RecipeService
   end
 
-  it "#conn" do
-    service = RecipeService.new
-    connection = service.conn
+  it "#get_recipes_by_country" do
+    VCR.use_cassette("recipes_by_country") do
+      country = "Spain"
+      search = RecipeService.new.get_recipes_by_country(country)
 
-    expect(connection).to be_an_instance_of Faraday::Connection
-    expect(connection.url_prefix.to_s).to eq("https://api.edamam.com/")
-  end
+      expect(search[:hits]).to be_an Array
 
-  it "#get_url" do
-    # Stub the Faraday connection to return a mock response
-    allow_any_instance_of(Faraday::Connection).to receive(:get)
-    .with('test')
-    .and_return(double(body: '{"message": "sldkjslfls"}'))
+      recipe_data = search[:hits].first[:recipe]
 
-    service = RecipeService.new
-    response = service.get_url('test')
-
-    expect(response).to eq({ message: 'sldkjslfls' })
+      expect(recipe_data).to have_key :label
+      expect(recipe_data).to have_key :url
+      expect(recipe_data).to have_key :image
+      expect(recipe_data[:label]).to be_a String
+    end
   end
 end

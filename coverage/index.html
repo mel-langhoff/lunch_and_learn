@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.12.3/application.js' type='text/javascript'></script>
     <link href='./assets/0.12.3/application.css' media='screen, projection, print' rel='stylesheet' type='text/css' />
-    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.12.3/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.12.3/favicon.png" />
   </head>
 
@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-06-09T14:32:06-06:00">2024-06-09T14:32:06-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-06-09T15:05:25-06:00">2024-06-09T15:05:25-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -22,15 +22,15 @@
   <h2>
     <span class="group_name">All Files</span>
     (<span class="covered_percent">
-      <span class="yellow">
-  90.0%
+      <span class="green">
+  100.0%
 </span>
 
      </span>
      covered at
      <span class="covered_strength">
-       <span class="green">
-         1.2
+       <span class="yellow">
+         1.0
        </span>
     </span> hits/line
     )
@@ -43,11 +43,11 @@
   </div>
 
   <div class="t-line-summary">
-    <b>10</b> relevant lines,
-    <span class="green"><b>9</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed. </span>
-    (<span class="yellow">
-  90.0%
+    <b>11</b> relevant lines,
+    <span class="green"><b>11</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed. </span>
+    (<span class="green">
+  100.0%
 </span>
 )
   </div>
@@ -72,12 +72,12 @@
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#817bd1c55d2e9b89752f493216bdd84f01fd79d4" class="src_link" title="app/services/recipe_service.rb">app/services/recipe_service.rb</a></td>
-            <td class="yellow strong cell--number t-file__coverage">90.00 %</td>
-            <td class="cell--number">18</td>
-            <td class="cell--number">10</td>
-            <td class="cell--number">9</td>
-            <td class="cell--number">1</td>
-            <td class="cell--number">1.20</td>
+            <td class="green strong cell--number t-file__coverage">100.00 %</td>
+            <td class="cell--number">20</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">11</td>
+            <td class="cell--number">0</td>
+            <td class="cell--number">1.00</td>
             
           </tr>
         
@@ -102,8 +102,8 @@
   <div class="header">
     <h3>app/services/recipe_service.rb</h3>
     <h4>
-      <span class="yellow">
-  90.0%
+      <span class="green">
+  100.0%
 </span>
 
       lines covered
@@ -112,9 +112,9 @@
     
 
     <div class="t-line-summary">
-      <b>10</b> relevant lines.
-      <span class="green"><b>9</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>11</b> relevant lines.
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
 
     
@@ -158,13 +158,13 @@
         </div>
       
         <div>
-          <li class="missed" data-hits="0" data-linenumber="4">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="4">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">    get_url(&quot;api/v1/recipes/type=public&amp;q=#{country}&quot;)    </code>
+            
+
+            <code class="ruby">    get_url(&quot;/api/recipes/v2&quot;, { q: country, type: &quot;public&quot; } )    </code>
           </li>
         </div>
       
@@ -197,67 +197,12 @@
 
             
 
-            <code class="ruby">  def conn</code>
+            <code class="ruby">  private</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="8">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">    Faraday.new(url: &#39;https://api.edamam.com/&#39;) do |faraday|</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="9">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      faraday.params[:app_id] = Rails.application.credentials.edamam_id[:key]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="2" data-linenumber="10">
-            <span class="hits">2</span>
-            
-
-            
-
-            <code class="ruby">      faraday.params[:app_key] = Rails.application.credentials.edamam[:api_key]</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby">    end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="12">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="13">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -268,40 +213,62 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="14">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">  def get_url(url, params = {})</code>
+            <code class="ruby">  def conn</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="15">
+          <li class="covered" data-hits="1" data-linenumber="10">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    response = conn.get(url)</code>
+            <code class="ruby">    Faraday.new(url: &#39;https://api.edamam.com/&#39;) do |faraday|</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="16">
+          <li class="covered" data-hits="1" data-linenumber="11">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+            <code class="ruby">      faraday.params[:app_id] = Rails.application.credentials.edamam_id[:key]</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="17">
+          <li class="covered" data-hits="1" data-linenumber="12">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">      faraday.params[:app_key] = Rails.application.credentials.edamam[:api_key]</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
+            
+            
+
+            
+
+            <code class="ruby">    end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="14">
             
             
 
@@ -312,7 +279,62 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="18">
+          <li class="never" data-hits="" data-linenumber="15">
+            
+            
+
+            
+
+            <code class="ruby"></code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">  def get_url(url, params = {})</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="17">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    response = conn.get(url, params)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="1" data-linenumber="18">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    JSON.parse(response.body, symbolize_names: true)</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="19">
+            
+            
+
+            
+
+            <code class="ruby">  end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="20">
             
             
 
