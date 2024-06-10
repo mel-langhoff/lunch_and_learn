@@ -7,9 +7,9 @@ RSpec.describe "Users Api" do
     @user_params =
     {
       email: "blah@jaja.com",
-      name: "Blahblah",
-      password: "test",
-      password_confirmation: "test"
+      name: "Blah",
+      password: "blah",
+      password_confirmation: "blah"
     }
   end
 
