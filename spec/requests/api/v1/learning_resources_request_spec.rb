@@ -21,12 +21,13 @@ RSpec.describe "Recipes Api" do
         expect(data).to be_a Hash
         expect(data[:id]).to be_nil
         expect(data[:type]).to eq("learning_resource")
-        
+
         attributes = json_response[:data][:attributes]
+        
         expect(attributes[:country]).to eq("laos")
-        expect(attributes[:video]).to be_a Hash
-        expect(attributes[:video][:title]).to be_a(String)
-        expect(attributes[:video][:youtube_video_id]).to be_a(String)
+        expect(attributes[:video]).to be_an Array
+        expect(attributes[:video].first[:title]).to be_a(String)
+        expect(attributes[:video].first[:youtube_video_id]).to be_a(String)
 
         expect(attributes[:images]).to be_an Array
         expect(attributes[:images].size).to be <= 10
