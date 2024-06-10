@@ -16,6 +16,7 @@ RSpec.describe "TouristSites Api" do
 
         expect(json_response).to have_key(:data)
         expect(json_response[:data]).to be_an(Array)
+        expect(json_response[:data].length).to eq(10)
 
         site = json_response[:data].first
         expect(site[:id]).to be_nil
