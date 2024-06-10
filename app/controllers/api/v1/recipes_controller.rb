@@ -5,7 +5,7 @@ class Api::V1::RecipesController < ApplicationController
     recipes = RecipeService.get_recipes_by_country(country)
 
     if recipes.any?
-      render json: RecipeSerializer.new
+      render json: RecipeSerializer.new(recipes)
     else
       render json: { data: [] }
     end
