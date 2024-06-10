@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get "recipes", to: "recipes#index"
+      get "tourist_sites", to: "tourist_sites#index"
     end
   end
   # Defines the root path route ("/")
