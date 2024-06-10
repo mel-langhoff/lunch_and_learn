@@ -1,7 +1,7 @@
 class RecipeService
 
   def get_recipes_by_country(country)
-    get_url("/api/recipes/v2", { q: country, type: "public" } )
+    get_url("api/recipes/v2", { q: country, type: "public" } )
   end
 
   private

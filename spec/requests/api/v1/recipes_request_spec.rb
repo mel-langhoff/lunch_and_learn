@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "Recipes Api" do
   describe "/api/v1/recipes" do
     it "returns recipes when country parameter is present" do
-
+      VCR.use_cassette("recipe_search") do
         # file = File.read("spec/fixtures/thailand.json")
         # stub_request(:get, "https://api.edamam.com/api/recipes/v2?app_id=3040a7e4&app_key=#{Rails.application.credentials.edamam[:api_key]}&q=thailand&type=public").
         #   with(
@@ -35,12 +35,12 @@ RSpec.describe "Recipes Api" do
 
         country = "thailand"
         get "/api/v1/recipes?country=#{country}"
-
+# require 'pry'; binding.pry
         expect(response).to have_http_status(:ok)
 
         json = JSON.parse(response.body, symbolize_names: true)
 
-        expect(json).to be_an Array
+        # expect(json).to be_an Array
 
         recipe = json[:data].first
 
@@ -48,11 +48,11 @@ RSpec.describe "Recipes Api" do
         expect(recipe[:type]).to eq("recipe")
 
         attributes = recipe[:attributes]
-        expect(attributes[:title]).to be_a(String)
+        expect(attributes[:label]).to be_a(String)
         expect(attributes[:url]).to be_a(String)
         expect(attributes[:image]).to be_a(String)
         expect(attributes[:country]).to eq("Thailand")
-      
+      end
     end
   end
 end

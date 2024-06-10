@@ -1,6 +1,6 @@
 class YoutubeService
 
-  def search(country)
+  def get_videos(country)
     get_url("?q=#{country}")
   end
 

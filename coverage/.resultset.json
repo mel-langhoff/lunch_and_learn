@@ -1,6 +1,109 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/geoapify_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/services/pexel_service_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/services/recipe_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/recipe_service.rb": {
         "lines": [
           1,
@@ -81,6 +184,6 @@
         ]
       }
     },
-    "timestamp": 1717984075
+    "timestamp": 1718034754
   }
 }
