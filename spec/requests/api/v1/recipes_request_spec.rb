@@ -14,7 +14,7 @@ RSpec.describe "Recipes Api" do
         expect(response).to have_http_status(:ok)
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-# require 'pry'; binding.pry
+
         expect(json_response).to be_a Hash
         expect(json_response[:data]).to be_an Array
 
