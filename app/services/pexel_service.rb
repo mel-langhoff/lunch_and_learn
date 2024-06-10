@@ -1,10 +1,27 @@
 class PexelService
 
   def self.get_images(country)
-    get_url("?query=#{country}")
+    response = get_url("?query=#{country}")
+    # require 'pry'; binding.pry
+    parse_response(response)
+    # response[:photos].map do |photo|
+    #   {
+    #     alt_tag: photo[:alt],
+    #     url: photo[:src][:original]
+    #   }
+    # end
   end
 
   private
+
+  def self.parse_response(response)
+    response[:photos].map do |photo|
+      {
+        alt_tag: photo[:alt],
+        url: photo[:src][:original]
+      }
+    end
+  end
 
   def self.conn
     Faraday.new(url: 'https://api.pexels.com/v1/search/') do |faraday|

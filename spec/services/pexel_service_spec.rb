@@ -13,17 +13,19 @@ RSpec.describe PexelService do
       country = "Laos"
       search = PexelService.get_images(country)
 
-      expect(search).to be_a(Hash)
+      expect(search).to be_an Array
+      # require 'pry'; binding.pry
+      expect(search.size).to be <= 10
 
-      expect(search[:photos]).to be_an(Array)
-      expect(search[:photos].size).to be <= 10
+      search.each do |photo|
+        expect(photo).to be_a Hash
 
-      image = search[:photos].first
-      expect(image).to have_key(:alt)
-      expect(image[:alt]).to be_a(String)
+        expect(photo).to have_key(:alt_tag)
+        expect(photo[:alt_tag]).to be_a(String)
 
-      expect(image).to have_key(:url)
-      expect(image[:url]).to be_a(String)
+        expect(photo).to have_key(:url)
+        expect(photo[:url]).to be_a(String)
+      end
     end
   end
 end

@@ -13,11 +13,14 @@ RSpec.describe YoutubeService do
       country = "Laos"
       search = YoutubeService.get_video(country)
 
-      expect(search).to be_a(Hash)
+      expect(search).to be_an Array
+      expect(search.first).to be_a Hash
 
-      expect(search[:items]).to be_an(Array)
-      expect(search[:items].first[:snippet][:title]).to be_a(String)
-      expect(search[:items].first[:id][:videoId]).to be_a(String)
+      expect(search.first).to have_key(:title)
+      expect(search.first[:title]).to be_a(String)
+
+      expect(search.first).to have_key(:youtube_video_id)
+      expect(search.first[:youtube_video_id]).to be_a(String)
     end
   end
 end
