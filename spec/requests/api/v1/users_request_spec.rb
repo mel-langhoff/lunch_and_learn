@@ -15,7 +15,8 @@ RSpec.describe "Users Api" do
 
   describe "/api/v1/users" do
     it "can create a user" do
-      post "/api/v1/users", params: @user_params
+      # params is used to pass parameters to the request body, not to the URL
+      post "/api/v1/users", params: @user_params.to_json, headers: { 'Content-Type': 'application/json' } 
 
       expect(response).to have_http_status(:created)
 
