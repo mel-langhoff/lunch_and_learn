@@ -11,7 +11,7 @@ Rails.application.routes.draw do
       get "tourist_sites", to: "tourist_sites#index"
       get "learning_resources", to: "learning_resources#index"
 
-      resources :users, only: [:create]
+      post "users", to: "users#create"
     end
   end
   # Defines the root path route ("/")

@@ -74,6 +74,43 @@
           null
         ]
       },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/requests/api/v1/users_request_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/controllers/api/v1/learning_resources_controller.rb": {
         "lines": [
           1,
@@ -404,8 +441,72 @@
           null,
           null
         ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/controllers/api/v1/users_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/models/user.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null
+        ]
       }
     },
-    "timestamp": 1718052993
+    "timestamp": 1718055946
   }
 }
