@@ -1,12 +1,12 @@
 class YoutubeService
 
-  def get_videos(country)
+  def self.get_video(country)
     get_url("?q=#{country}")
   end
 
   private
 
-  def conn
+  def self.conn
     Faraday.new(url: 'https://www.googleapis.com/youtube/v3/search/') do |faraday|
       faraday.params[:key] = Rails.application.credentials.youtube[:api_key]
       faraday.params[:channelId] = "UCluQ5yInbeAkkeCndNnUhpw"
@@ -15,7 +15,7 @@ class YoutubeService
     end
   end
 
-  def get_url(url, params = {})
+  def self.get_url(url, params = {})
     response = conn.get(url, params)
     JSON.parse(response.body, symbolize_names: true)
   end

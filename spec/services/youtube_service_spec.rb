@@ -8,10 +8,10 @@ RSpec.describe YoutubeService do
     expect(service).to be_an_instance_of YoutubeService
   end
 
-  it "#get_videos" do
+  it "#get_video" do
     VCR.use_cassette("get_yt_vids") do
       country = "Laos"
-      search = YoutubeService.new.get_videos(country)
+      search = YoutubeService.get_video(country)
 
       expect(search).to be_a(Hash)
 

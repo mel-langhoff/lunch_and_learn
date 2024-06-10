@@ -11,7 +11,7 @@ RSpec.describe PexelService do
   it "#get_images" do
     VCR.use_cassette("get_pexel_imgs") do
       country = "Laos"
-      search = PexelService.new.get_images(country)
+      search = PexelService.get_images(country)
 
       expect(search).to be_a(Hash)
 
