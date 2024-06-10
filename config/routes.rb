@@ -10,6 +10,8 @@ Rails.application.routes.draw do
       get "recipes", to: "recipes#index"
       get "tourist_sites", to: "tourist_sites#index"
       get "learning_resources", to: "learning_resources#index"
+
+      resources :users, only: [:create]
     end
   end
   # Defines the root path route ("/")
