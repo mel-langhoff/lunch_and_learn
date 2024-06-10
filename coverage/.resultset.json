@@ -1,31 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/recipe_service.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          1,
-          1,
-          null,
-          null
-        ]
-      }
     },
-    "timestamp": 1717968561
+    "timestamp": 1717981463
   }
 }
