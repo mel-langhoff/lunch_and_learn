@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       get "learning_resources", to: "learning_resources#index"
 
       post "users", to: "users#create"
+
+      post "sessions", to: "sessions#create"
     end
   end
   # Defines the root path route ("/")
