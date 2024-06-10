@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.geoapify.com/v1/places?apiKey=<GEOAPIFY_KEY>&categories=tourism&filter=circle:2.3522,48.8566,3000&limit=10
+    uri: https://api.geoapify.com/v1/places?apiKey=<GEOAPIFY_KEY>&categories=tourism,tourism.information&filter=circle:-4.8379791,39.3260685,3000&limit=10&type=shop
     body:
       encoding: US-ASCII
       string: ''
@@ -15,15 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
       Date:
-      - Mon, 10 Jun 2024 15:45:21 GMT
+      - Mon, 10 Jun 2024 16:12:03 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '73'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Api-Version:
@@ -49,17 +49,17 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=FBuXt2O7r%2FRJjKB7M8BLZdeWB4y7TR%2BeMHCVIS4yRSUHrFW%2B6JXMyXW06grU43VdgnI66UvVu5%2FEIPceNfC87wSb%2BU%2BEl3GRvj2%2FGRsxlhjwwmvhl40Syvq2MIt1mQk1D14%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=rp7IWGMVY1WTfYZ06CIvcQI%2Fa1qCbs9S58tDfN8yDm5hXZb%2FPlia1U8ThqwIH0YY8kcanmRN%2Bb0frYqt3nKxzBX%2Fj3fvcyXPfhTFtK5A0L3KiCWjzqf7yyMEo7xolDeVcsE%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 891a7ceb9a64111f-ORD
+      - 891aa4091ba41040-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"statusCode":400,"error":"Bad Request","message":"\"type\" is required"}'
-  recorded_at: Mon, 10 Jun 2024 15:45:21 GMT
+      encoding: ASCII-8BIT
+      string: '{"features":[],"type":"FeatureCollection"}'
+  recorded_at: Mon, 10 Jun 2024 16:12:03 GMT
 recorded_with: VCR 6.2.0

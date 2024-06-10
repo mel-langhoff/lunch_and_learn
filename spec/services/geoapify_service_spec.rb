@@ -21,8 +21,9 @@ RSpec.describe GeoapifyService do
 
   it "#get_tourist_sites" do
     VCR.use_cassette("get_tourist_sites") do
-      lat = 48.8566
-      lon = 2.3522
+      # Spain
+      lat = 39.3260685
+      lon = -4.8379791
       search = GeoapifyService.get_tourist_sites(lat, lon)
 
       expect(search).to be_an(Array)
