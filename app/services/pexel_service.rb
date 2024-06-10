@@ -7,10 +7,10 @@ class PexelService
   private
 
   def conn
-    Faraday.new(url: 'https://api.pexels.com/v1/') do |faraday|
-      faraday.params[:client_id] = Rails.application.credentials.pexel[:api_key]
+    Faraday.new(url: 'https://api.pexels.com/v1/search/') do |faraday|
+      faraday.headers["Authorization"] = Rails.application.credentials.pexel[:api_key]
       faraday.params[:page] = "1"
-      faraday.params[:page_size] = "10"
+      faraday.params[:per_page] = "10"
     end
   end
 

@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.geoapify.com/v2/places?apiKey=<GEOAPIFY_KEY>&bias=proximity:-4.8379791,39.3260685&limit=10&type=shop
+    uri: https://api.geoapify.com/v2/places?apiKey=<GEOAPIFY_KEY>&bias=proximity:-4.8379791,39.3260685&limit=10&type=tourism
     body:
       encoding: US-ASCII
       string: ''
@@ -15,15 +15,15 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 200
+      message: OK
     headers:
       Date:
-      - Mon, 10 Jun 2024 16:30:16 GMT
+      - Mon, 10 Jun 2024 19:29:20 GMT
       Content-Type:
       - application/json; charset=utf-8
-      Content-Length:
-      - '18288'
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       Api-Version:
@@ -49,228 +49,18 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=qY1FvDEmuI%2BGw5HLM1pviGI0ICQDX7CWsjf4nHLvDAxvT65Q1x12QXmTj8%2FYLGghlNTbJ9TDSpW8nS%2B5C%2FN%2FiNl0zyLepTfpia8yQngf%2FcXTISjecUC%2BQTRuX6tAExqfZxY%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=htF%2FH0CcaUP6nLauxp%2FCEnxvGTTk2PwxqCD5GemcWFY2d%2FyEQk%2FncAPIMDp%2BhojWYrBhgU%2FDKRWaCkbBsmei9ttQZBILLOeodKqlVF%2BgDb0MMPfiY8dnqPGYrtc8URfhUjM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 891abeb93d421141-ORD
+      - 891bc4faba3a112c-ORD
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"statusCode":400,"error":"Bad Request","message":"Invalid parameters.
-        Category \"shop\" is not supported. The supported categories are: accommodation.hotel,
-        accommodation.hut, accommodation.apartment, accommodation.chalet, accommodation.guest_house,
-        accommodation.hostel, accommodation.motel, accommodation, activity.community_center,
-        activity.sport_club, activity, adult.nightclub, adult.stripclub, adult.swingerclub,
-        adult.brothel, adult.casino, adult.adult_gaming_centre, adult, airport.private,
-        airport.international, airport.military, airport.gliding, airport.airfield,
-        airport, amenity.toilet, amenity.drinking_water, amenity.give_box.food, amenity.give_box.books,
-        amenity.give_box, amenity, beach.beach_resort, beach, administrative.continent_level,
-        administrative.country_level, administrative.country_part_level, administrative.state_level,
-        administrative.county_level, administrative.city_level, administrative.district_level,
-        administrative.suburb_level, administrative.neighbourhood_level, administrative,
-        postal_code, political, low_emission_zone, building.residential, building.commercial,
-        building.industrial, building.office, building.catering, building.healthcare,
-        building.university, building.college, building.dormitory, building.school,
-        building.driving_school, building.kindergarten, building.public_and_civil,
-        building.sport, building.spa, building.place_of_worship, building.holiday_house,
-        building.accommodation, building.tourism, building.transportation, building.military,
-        building.service, building.facility, building.garage, building.parking, building.toilet,
-        building.prison, building.entertainment, building.historic, building, camping.camp_pitch,
-        camping.camp_site, camping.summer_camp, camping.caravan_site, camping, catering.restaurant.pizza,
-        catering.restaurant.burger, catering.restaurant.regional, catering.restaurant.italian,
-        catering.restaurant.chinese, catering.restaurant.sandwich, catering.restaurant.chicken,
-        catering.restaurant.mexican, catering.restaurant.japanese, catering.restaurant.american,
-        catering.restaurant.kebab, catering.restaurant.indian, catering.restaurant.asian,
-        catering.restaurant.sushi, catering.restaurant.french, catering.restaurant.german,
-        catering.restaurant.thai, catering.restaurant.greek, catering.restaurant.seafood,
-        catering.restaurant.fish_and_chips, catering.restaurant.steak_house, catering.restaurant.international,
-        catering.restaurant.tex-mex, catering.restaurant.vietnamese, catering.restaurant.turkish,
-        catering.restaurant.korean, catering.restaurant.noodle, catering.restaurant.barbecue,
-        catering.restaurant.spanish, catering.restaurant.fish, catering.restaurant.ramen,
-        catering.restaurant.mediterranean, catering.restaurant.friture, catering.restaurant.beef_bowl,
-        catering.restaurant.lebanese, catering.restaurant.wings, catering.restaurant.georgian,
-        catering.restaurant.tapas, catering.restaurant.indonesian, catering.restaurant.arab,
-        catering.restaurant.portuguese, catering.restaurant.russian, catering.restaurant.filipino,
-        catering.restaurant.african, catering.restaurant.malaysian, catering.restaurant.caribbean,
-        catering.restaurant.peruvian, catering.restaurant.bavarian, catering.restaurant.brazilian,
-        catering.restaurant.curry, catering.restaurant.dumpling, catering.restaurant.persian,
-        catering.restaurant.argentinian, catering.restaurant.oriental, catering.restaurant.balkan,
-        catering.restaurant.moroccan, catering.restaurant.pita, catering.restaurant.ethiopian,
-        catering.restaurant.taiwanese, catering.restaurant.latin_american, catering.restaurant.hawaiian,
-        catering.restaurant.irish, catering.restaurant.austrian, catering.restaurant.croatian,
-        catering.restaurant.danish, catering.restaurant.tacos, catering.restaurant.bolivian,
-        catering.restaurant.hungarian, catering.restaurant.western, catering.restaurant.european,
-        catering.restaurant.jamaican, catering.restaurant.cuban, catering.restaurant.soup,
-        catering.restaurant.uzbek, catering.restaurant.nepalese, catering.restaurant.czech,
-        catering.restaurant.syrian, catering.restaurant.afghan, catering.restaurant.malay,
-        catering.restaurant.chili, catering.restaurant.belgian, catering.restaurant.ukrainian,
-        catering.restaurant.swedish, catering.restaurant.pakistani, catering.restaurant,
-        catering.fast_food.pizza, catering.fast_food.burger, catering.fast_food.sandwich,
-        catering.fast_food.kebab, catering.fast_food.fish_and_chips, catering.fast_food.noodle,
-        catering.fast_food.ramen, catering.fast_food.wings, catering.fast_food.tapas,
-        catering.fast_food.pita, catering.fast_food.tacos, catering.fast_food.soup,
-        catering.fast_food.salad, catering.fast_food.hot_dog, catering.fast_food,
-        catering.cafe.waffle, catering.cafe.ice_cream, catering.cafe.coffee_shop,
-        catering.cafe.donut, catering.cafe.crepe, catering.cafe.bubble_tea, catering.cafe.cake,
-        catering.cafe.frozen_yogurt, catering.cafe.dessert, catering.cafe.coffee,
-        catering.cafe.tea, catering.cafe, catering.food_court, catering.bar, catering.pub,
-        catering.ice_cream, catering.biergarten, catering.taproom, catering, commercial.supermarket,
-        commercial.marketplace, commercial.shopping_mall, commercial.department_store,
-        commercial.elektronics, commercial.outdoor_and_sport.water_sports, commercial.outdoor_and_sport.ski,
-        commercial.outdoor_and_sport.diving, commercial.outdoor_and_sport.hunting,
-        commercial.outdoor_and_sport.bicycle, commercial.outdoor_and_sport.fishing,
-        commercial.outdoor_and_sport.golf, commercial.outdoor_and_sport, commercial.vehicle,
-        commercial.hobby.model, commercial.hobby.anime, commercial.hobby.collecting,
-        commercial.hobby.games, commercial.hobby.brewing, commercial.hobby.photo,
-        commercial.hobby.music, commercial.hobby.sewing_and_knitting, commercial.hobby.art,
-        commercial.hobby, commercial.books, commercial.gift_and_souvenir, commercial.stationery,
-        commercial.newsagent, commercial.tickets_and_lottery, commercial.clothing.shoes,
-        commercial.clothing.clothes, commercial.clothing.underwear, commercial.clothing.sport,
-        commercial.clothing.men, commercial.clothing.women, commercial.clothing.kids,
-        commercial.clothing.accessories, commercial.clothing, commercial.bag, commercial.baby_goods,
-        commercial.agrarian, commercial.garden, commercial.houseware_and_hardware.doityourself,
-        commercial.houseware_and_hardware.hardware_and_tools, commercial.houseware_and_hardware.building_materials.paint,
-        commercial.houseware_and_hardware.building_materials.glaziery, commercial.houseware_and_hardware.building_materials.doors,
-        commercial.houseware_and_hardware.building_materials.tiles, commercial.houseware_and_hardware.building_materials.windows,
-        commercial.houseware_and_hardware.building_materials.flooring, commercial.houseware_and_hardware.building_materials,
-        commercial.houseware_and_hardware.fireplace, commercial.houseware_and_hardware.swimming_pool,
-        commercial.houseware_and_hardware, commercial.florist, commercial.furniture_and_interior.lighting,
-        commercial.furniture_and_interior.curtain, commercial.furniture_and_interior.carpet,
-        commercial.furniture_and_interior.kitchen, commercial.furniture_and_interior.bed,
-        commercial.furniture_and_interior.bathroom, commercial.furniture_and_interior,
-        commercial.chemist, commercial.health_and_beauty.pharmacy, commercial.health_and_beauty.optician,
-        commercial.health_and_beauty.medical_supply, commercial.health_and_beauty.hearing_aids,
-        commercial.health_and_beauty.herbalist, commercial.health_and_beauty.cosmetics,
-        commercial.health_and_beauty.wigs, commercial.health_and_beauty, commercial.toy_and_game,
-        commercial.pet, commercial.food_and_drink.bakery, commercial.food_and_drink.deli,
-        commercial.food_and_drink.frozen_food, commercial.food_and_drink.pasta, commercial.food_and_drink.spices,
-        commercial.food_and_drink.organic, commercial.food_and_drink.honey, commercial.food_and_drink.rice,
-        commercial.food_and_drink.nuts, commercial.food_and_drink.health_food, commercial.food_and_drink.ice_cream,
-        commercial.food_and_drink.seafood, commercial.food_and_drink.fruit_and_vegetable,
-        commercial.food_and_drink.farm, commercial.food_and_drink.confectionery, commercial.food_and_drink.chocolate,
-        commercial.food_and_drink.butcher, commercial.food_and_drink.cheese_and_dairy,
-        commercial.food_and_drink.drinks, commercial.food_and_drink.coffee_and_tea,
-        commercial.food_and_drink, commercial.convenience, commercial.discount_store,
-        commercial.smoking, commercial.second_hand, commercial.gas, commercial.weapons,
-        commercial.pyrotechnics, commercial.energy, commercial.wedding, commercial.jewelry,
-        commercial.watches, commercial.art, commercial.antiques, commercial.video_and_music,
-        commercial.erotic, commercial.trade, commercial.kiosk, commercial, education.school,
-        education.driving_school, education.music_school, education.language_school,
-        education.library, education.college, education.university, education, childcare.kindergarten,
-        childcare, entertainment.culture.theatre, entertainment.culture.arts_centre,
-        entertainment.culture.gallery, entertainment.culture, entertainment.zoo, entertainment.aquarium,
-        entertainment.planetarium, entertainment.museum, entertainment.cinema, entertainment.amusement_arcade,
-        entertainment.escape_game, entertainment.miniature_golf, entertainment.bowling_alley,
-        entertainment.flying_fox, entertainment.theme_park, entertainment.water_park,
-        entertainment.activity_park.trampoline, entertainment.activity_park.climbing,
-        entertainment.activity_park, entertainment, healthcare.clinic_or_praxis.allergology,
-        healthcare.clinic_or_praxis.vascular_surgery, healthcare.clinic_or_praxis.urology,
-        healthcare.clinic_or_praxis.trauma, healthcare.clinic_or_praxis.rheumatology,
-        healthcare.clinic_or_praxis.radiology, healthcare.clinic_or_praxis.pulmonology,
-        healthcare.clinic_or_praxis.psychiatry, healthcare.clinic_or_praxis.paediatrics,
-        healthcare.clinic_or_praxis.otolaryngology, healthcare.clinic_or_praxis.orthopaedics,
-        healthcare.clinic_or_praxis.ophthalmology, healthcare.clinic_or_praxis.occupational,
-        healthcare.clinic_or_praxis.gynaecology, healthcare.clinic_or_praxis.general,
-        healthcare.clinic_or_praxis.gastroenterology, healthcare.clinic_or_praxis.endocrinology,
-        healthcare.clinic_or_praxis.dermatology, healthcare.clinic_or_praxis.cardiology,
-        healthcare.clinic_or_praxis, healthcare.dentist.orthodontics, healthcare.dentist,
-        healthcare.hospital, healthcare.pharmacy, healthcare, heritage.unesco, heritage,
-        traffic_signals, highway.residential, highway.public, highway.service, highway.track,
-        highway.footway, highway.busway, highway.cycleway, highway.pedestrian, highway.path,
-        highway.living_street, highway.primary, highway.secondary, highway.tertiary,
-        highway.trunk, highway.motorway, highway, leisure.picnic.picnic_site, leisure.picnic.picnic_table,
-        leisure.picnic.bbq, leisure.picnic, leisure.playground, leisure.spa.public_bath,
-        leisure.spa.sauna, leisure.spa, leisure.park.garden, leisure.park.nature_reserve,
-        leisure.park, leisure, man_made.pier, man_made.breakwater, man_made.tower,
-        man_made.water_tower, man_made.bridge, man_made.lighthouse, man_made.windmill,
-        man_made.watermill, man_made, natural.forest, natural.water.sea, natural.water.spring,
-        natural.water.reef, natural.water.hot_spring, natural.water.geyser, natural.water,
-        natural.mountain.peak, natural.mountain.glacier, natural.mountain.cliff, natural.mountain.rock,
-        natural.mountain.cave_entrance, natural.mountain, natural.sand.dune, natural.sand,
-        natural.protected_area, natural, national_park, office.government.administrative,
-        office.government.register_office, office.government.tax, office.government.public_service,
-        office.government.ministry, office.government.healthcare, office.government.prosecutor,
-        office.government.transportation, office.government.social_services, office.government.legislative,
-        office.government.education, office.government.customs, office.government.social_security,
-        office.government.environment, office.government.migration, office.government.cadaster,
-        office.government.forestry, office.government.agriculture, office.government,
-        office.company, office.estate_agent, office.insurance, office.lawyer, office.telecommunication,
-        office.educational_institution, office.association, office.non_profit, office.diplomatic,
-        office.it, office.accountant, office.employment_agency, office.religion, office.research,
-        office.architect, office.financial, office.tax_advisor, office.advertising_agency,
-        office.notary, office.newspaper, office.political_party, office.logistics,
-        office.energy_supplier, office.travel_agent, office.financial_advisor, office.consulting,
-        office.foundation, office.coworking, office.water_utility, office.forestry,
-        office.charity, office.security, office, parking.cars.surface, parking.cars.multistorey,
-        parking.cars.underground, parking.cars.rooftop, parking.cars, parking.surface,
-        parking.multistorey, parking.underground, parking.rooftop, parking.motorcycle,
-        parking.bicycles, parking, pet.shop, pet.veterinary, pet.service, pet.dog_park,
-        pet, continent, island, populated_place.hamlet, populated_place.village, populated_place.neighbourhood,
-        populated_place.suburb, populated_place.town, populated_place.city_block,
-        populated_place.quarter, populated_place.city, populated_place.allotments,
-        populated_place.county, populated_place.municipality, populated_place.district,
-        populated_place.region, populated_place.state, populated_place.borough, populated_place.subdistrict,
-        populated_place.province, populated_place.township, populated_place, power.tower,
-        power.pole, power.portal, power.switch, power.plant.solar, power.plant.hydro,
-        power.plant.wind, power.plant.gas, power.plant.coal, power.plant.biomass,
-        power.plant.oil, power.plant.waste, power.plant.geothermal, power.plant.nuclear,
-        power.plant, power.catenary_mast, power.cable, power.terminal, power.insulator,
-        power.heliostat, power.connection, power.inverter, power.converter, power.compensator,
-        power.generator.solar, power.generator.wind, power.generator.gas, power.generator.biomass,
-        power.generator.hydro, power.generator.oil, power.generator.coal, power.generator.nuclear,
-        power.generator.geothermal, power.generator, power.line, power.circuit, power.minor_line,
-        power.substation, power.transformer, power, production.factory, production.winery,
-        production.brewery, production.cheese, production.pottery, production, public_transport.train,
-        public_transport.light_rail, public_transport.monorail, public_transport.subway.entrance,
-        public_transport.subway, public_transport.bus, public_transport.tram, public_transport.ferry,
-        public_transport.aerialway, public_transport, railway.train, railway.subway,
-        railway.tram, railway.light_rail, railway.funicular, railway.construction,
-        railway.underground, railway.surface, railway, religion.place_of_worship.buddhism,
-        religion.place_of_worship.christianity, religion.place_of_worship.hinduism,
-        religion.place_of_worship.islam, religion.place_of_worship.judaism, religion.place_of_worship.shinto,
-        religion.place_of_worship.sikhism, religion.place_of_worship.multifaith, religion.place_of_worship,
-        religion, rental.car, rental.storage, rental.bicycle, rental.boat, rental.ski,
-        rental, service.financial.atm, service.financial.payment_terminal, service.financial.bank,
-        service.financial.bureau_de_change, service.financial.money_transfer, service.financial.money_lender,
-        service.financial, service.cleaning.lavoir, service.cleaning.laundry, service.cleaning.dry_cleaning,
-        service.cleaning, service.travel_agency, service.post.office, service.post.box,
-        service.post, service.police, service.vehicle.fuel, service.vehicle.car_wash,
-        service.vehicle.charging_station, service.vehicle.repair.car, service.vehicle.repair.motorcycle,
-        service.vehicle.repair, service.vehicle, service.beauty.hairdresser, service.beauty.spa,
-        service.beauty.massage, service.beauty, service.tailor, service.funeral_directors,
-        service.bookmaker, service.estate_agent, service.locksmith, service.taxi,
-        service.social_facility.shelter, service.social_facility.food, service.social_facility.clothers,
-        service.social_facility, service.recycling.container, service.recycling.centre,
-        service.recycling.bin, service.recycling, service, ski.lift.cable_car, ski.lift.gondola,
-        ski.lift.mixed_lift, ski.lift.chair_lift, ski.lift.tow_line, ski.lift.magic_carpet,
-        ski.lift, ski, sport.stadium, sport.dive_centre, sport.horse_riding, sport.ice_rink,
-        sport.pitch, sport.sports_centre, sport.swimming_pool, sport.track, sport.fitness.fitness_centre,
-        sport.fitness.fitness_station, sport.fitness, sport, tourism.information.office,
-        tourism.information.map, tourism.information.ranger_station, tourism.information,
-        tourism.attraction.artwork, tourism.attraction.viewpoint, tourism.attraction.fountain,
-        tourism.attraction.clock, tourism.attraction, tourism.sights.square, tourism.sights.place_of_worship.church,
-        tourism.sights.place_of_worship.chapel, tourism.sights.place_of_worship.cathedral,
-        tourism.sights.place_of_worship.mosque, tourism.sights.place_of_worship.synagogue,
-        tourism.sights.place_of_worship.temple, tourism.sights.place_of_worship.shrine,
-        tourism.sights.place_of_worship, tourism.sights.monastery, tourism.sights.city_hall,
-        tourism.sights.conference_centre, tourism.sights.lighthouse, tourism.sights.windmill,
-        tourism.sights.tower, tourism.sights.battlefield, tourism.sights.fort, tourism.sights.castle,
-        tourism.sights.ruines, tourism.sights.archaeological_site, tourism.sights.city_gate,
-        tourism.sights.bridge, tourism.sights.memorial.aircraft, tourism.sights.memorial.locomotive,
-        tourism.sights.memorial.railway_car, tourism.sights.memorial.ship, tourism.sights.memorial.tank,
-        tourism.sights.memorial.tomb, tourism.sights.memorial.monument, tourism.sights.memorial.wayside_cross,
-        tourism.sights.memorial.boundary_stone, tourism.sights.memorial.pillory, tourism.sights.memorial.milestone,
-        tourism.sights.memorial, tourism.sights, tourism, access.yes, access.not_specified,
-        access, access_limited.private, access_limited.customers, access_limited.with_permit,
-        access_limited.services, access_limited, no_access, vegetarian.only, vegetarian,
-        vegan.only, vegan, halal.only, halal, kosher.only, kosher, organic.only, organic,
-        gluten_free, sugar_free, egg_free, soy_free, dogs.yes, dogs.leashed, dogs,
-        no_dogs, fee, no_fee.no, no_fee.not_specified, no_fee, internet_access.free,
-        internet_access.for_customers, internet_access, named, wheelchair.yes, wheelchair.limited,
-        wheelchair"}'
-  recorded_at: Mon, 10 Jun 2024 16:30:16 GMT
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJ0eXBlIjoiRmVhdHVyZUNvbGxlY3Rpb24iLCJmZWF0dXJlcyI6W3sidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7Im5hbWUiOiJNb2xpbm8iLCJjb3VudHJ5IjoiU3BhaW4iLCJjb3VudHJ5X2NvZGUiOiJlcyIsInN0YXRlIjoiQ2FzdGlsZS1MYSBNYW5jaGEiLCJjb3VudHkiOiJDaXVkYWQgUmVhbCIsImNpdHkiOiJIb3JjYWpvIGRlIGxvcyBNb250ZXMiLCJwb3N0Y29kZSI6IjEzMTEwIiwic3RyZWV0IjoiQ00tNDEwNiIsImxvbiI6LTQuNjUxMzM0MDI4NDczNTY3LCJsYXQiOjM5LjMyNzU4NTUsImZvcm1hdHRlZCI6Ik1vbGlubywgQ00tNDEwNiwgMTMxMTAgSG9yY2FqbyBkZSBsb3MgTW9udGVzLCBTcGFpbiIsImFkZHJlc3NfbGluZTEiOiJNb2xpbm8iLCJhZGRyZXNzX2xpbmUyIjoiQ00tNDEwNiwgMTMxMTAgSG9yY2FqbyBkZSBsb3MgTW9udGVzLCBTcGFpbiIsImNhdGVnb3JpZXMiOlsidG91cmlzbSIsInRvdXJpc20uc2lnaHRzIiwidG91cmlzbS5zaWdodHMubWVtb3JpYWwiXSwiZGV0YWlscyI6W10sImRhdGFzb3VyY2UiOnsic291cmNlbmFtZSI6Im9wZW5zdHJlZXRtYXAiLCJhdHRyaWJ1dGlvbiI6IsKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzIiwibGljZW5zZSI6Ik9wZW4gRGF0YWJhc2UgTGljZW5zZSIsInVybCI6Imh0dHBzOi8vd3d3Lm9wZW5zdHJlZXRtYXAub3JnL2NvcHlyaWdodCIsInJhdyI6eyJuYW1lIjoiTW9saW5vIiwib3NtX2lkIjozMDA1NDE4NDUsImhpc3RvcmljIjoibWVtb3JpYWwiLCJvc21fdHlwZSI6IncifX0sImhpc3RvcmljIjp7InR5cGUiOiJtZW1vcmlhbCJ9LCJkaXN0YW5jZSI6MTYwODksInBsYWNlX2lkIjoiNTE3YzQzYmM0ZWY3OWExMmMwNTk5ZGYxNTg1MmVlYTk0MzQwZjAwMTAyZjkwMTk1ZTdlOTExMDAwMDAwMDA5MjAzMDY0ZDZmNmM2OTZlNmYifSwiZ2VvbWV0cnkiOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlstNC42NTEzMzQwMjg0NzM1NjcsMzkuMzI3NTg1NTAwMTczMThdfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsibmFtZSI6IkNhYmHDsWEiLCJjb3VudHJ5IjoiU3BhaW4iLCJjb3VudHJ5X2NvZGUiOiJlcyIsInN0YXRlIjoiQ2FzdGlsZS1MYSBNYW5jaGEiLCJjb3VudHkiOiJDaXVkYWQgUmVhbCIsImNpdHkiOiJIb3JjYWpvIGRlIGxvcyBNb250ZXMiLCJwb3N0Y29kZSI6IjEzMTEwIiwic3RyZWV0IjoiQ00tNDAxNyIsImxvbiI6LTQuNjQ0OTYwMDIwMzM3NjI0LCJsYXQiOjM5LjMyODI1MTEsImZvcm1hdHRlZCI6IkNhYmHDsWEsIENNLTQwMTcsIDEzMTEwIEhvcmNham8gZGUgbG9zIE1vbnRlcywgU3BhaW4iLCJhZGRyZXNzX2xpbmUxIjoiQ2FiYcOxYSIsImFkZHJlc3NfbGluZTIiOiJDTS00MDE3LCAxMzExMCBIb3JjYWpvIGRlIGxvcyBNb250ZXMsIFNwYWluIiwiY2F0ZWdvcmllcyI6WyJ0b3VyaXNtIiwidG91cmlzbS5zaWdodHMiLCJ0b3VyaXNtLnNpZ2h0cy5tZW1vcmlhbCJdLCJkZXRhaWxzIjpbXSwiZGF0YXNvdXJjZSI6eyJzb3VyY2VuYW1lIjoib3BlbnN0cmVldG1hcCIsImF0dHJpYnV0aW9uIjoiwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMiLCJsaWNlbnNlIjoiT3BlbiBEYXRhYmFzZSBMaWNlbnNlIiwidXJsIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0IiwicmF3Ijp7Im5hbWUiOiJDYWJhw7FhIiwib3NtX2lkIjozMDA1NDE2MzksImhpc3RvcmljIjoibWVtb3JpYWwiLCJvc21fdHlwZSI6IncifX0sImhpc3RvcmljIjp7InR5cGUiOiJtZW1vcmlhbCJ9LCJkaXN0YW5jZSI6MTY2NDAsInBsYWNlX2lkIjoiNTE3NDRmNGE2NjcwOTQxMmMwNTk2NDBmY2UyMTA0YWE0MzQwZjAwMTAyZjkwMWM3ZTZlOTExMDAwMDAwMDA5MjAzMDc0MzYxNjI2MWMzYjE2MSJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wy00LjY0NDk2MDAyMDMzNzYyNCwzOS4zMjgyNTExMDAxNzMyNzZdfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsibmFtZSI6IkVsIEphcmRhbCIsImNvdW50cnkiOiJTcGFpbiIsImNvdW50cnlfY29kZSI6ImVzIiwic3RhdGUiOiJFeHRyZW1hZHVyYSIsImNvdW50eSI6IkJhZGFqb3oiLCJjaXR5IjoiQ2FzdGlsYmxhbmNvIiwicG9zdGNvZGUiOiIwNjY4MCIsInN0cmVldCI6IkNhcnJldGVyYSBkZSBUYWxhdmVyYSBkZSBsYSBSZWluYSBhIEFsbWFkw6luIiwibG9uIjotNS4wNDc1MjgyLCJsYXQiOjM5LjI3OTEwMzgsInN0YXRlX2NvZGUiOiJFWCIsImZvcm1hdHRlZCI6IkVsIEphcmRhbCwgQ2FycmV0ZXJhIGRlIFRhbGF2ZXJhIGRlIGxhIFJlaW5hIGEgQWxtYWTDqW4sIDA2NjgwIENhc3RpbGJsYW5jbywgU3BhaW4iLCJhZGRyZXNzX2xpbmUxIjoiRWwgSmFyZGFsIiwiYWRkcmVzc19saW5lMiI6IkNhcnJldGVyYSBkZSBUYWxhdmVyYSBkZSBsYSBSZWluYSBhIEFsbWFkw6luLCAwNjY4MCBDYXN0aWxibGFuY28sIFNwYWluIiwiY2F0ZWdvcmllcyI6WyJ0b3VyaXNtIiwidG91cmlzbS5zaWdodHMiLCJ0b3VyaXNtLnNpZ2h0cy5hcmNoYWVvbG9naWNhbF9zaXRlIl0sImRldGFpbHMiOlsiZGV0YWlscyIsImRldGFpbHMuaGlzdG9yaWMiLCJkZXRhaWxzLndpa2lfYW5kX21lZGlhIl0sImRhdGFzb3VyY2UiOnsic291cmNlbmFtZSI6Im9wZW5zdHJlZXRtYXAiLCJhdHRyaWJ1dGlvbiI6IsKpIE9wZW5TdHJlZXRNYXAgY29udHJpYnV0b3JzIiwibGljZW5zZSI6Ik9wZW4gRGF0YWJhc2UgTGljZW5zZSIsInVybCI6Imh0dHBzOi8vd3d3Lm9wZW5zdHJlZXRtYXAub3JnL2NvcHlyaWdodCIsInJhdyI6eyJuYW1lIjoiRWwgSmFyZGFsIiwib3NtX2lkIjozOTM0OTQ1ODk5LCJ3ZWJzaXRlIjoiaHR0cHM6Ly9kaWFsbmV0LnVuaXJpb2phLmVzL3NlcnZsZXQvYXJ0aWN1bG8/Y29kaWdvPTIwNjQ4NCZvcmRlbj0xJmluZm89bGluayIsImhpc3RvcmljIjoiYXJjaGFlb2xvZ2ljYWxfc2l0ZSIsIm9zbV90eXBlIjoibiIsIndpa2lkYXRhIjoiUTE2NjQ4NjQxIiwid2lraXBlZGlhIjoiZXM6WWFjaW1pZW50byBkZSBFbCBKYXJkYWwiLCJoaXN0b3JpYzpwZXJpb2QiOiJpcm9uLWFnZSIsImhpc3RvcmljOmNpdmlsaXphdGlvbiI6InByZWhpc3RvcmljIn19LCJ3ZWJzaXRlIjoiaHR0cHM6Ly9kaWFsbmV0LnVuaXJpb2phLmVzL3NlcnZsZXQvYXJ0aWN1bG8/Y29kaWdvPTIwNjQ4NCZvcmRlbj0xJmluZm89bGluayIsIndpa2lfYW5kX21lZGlhIjp7Indpa2lkYXRhIjoiUTE2NjQ4NjQxIiwid2lraXBlZGlhIjoiZXM6WWFjaW1pZW50byBkZSBFbCBKYXJkYWwifSwiaGlzdG9yaWMiOnsidHlwZSI6ImFyY2hhZW9sb2dpY2FsX3NpdGUiLCJjaXZpbGl6YXRpb24iOiJwcmVoaXN0b3JpYyIsInBlcmlvZCI6Imlyb24tYWdlIn0sImRpc3RhbmNlIjoxODgxMiwicGxhY2VfaWQiOiI1MTBlOGQ4MjNiYWIzMDE0YzA1OTljZjM1ZWFjYjlhMzQzNDBmMDAxMDNmOTAxNmI4MjhhZWEwMDAwMDAwMDkyMDMwOTQ1NmMyMDRhNjE3MjY0NjE2YyJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wy01LjA0NzUyODIsMzkuMjc5MTAzODAwMTY2MjFdfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsiY291bnRyeSI6IlNwYWluIiwiY291bnRyeV9jb2RlIjoiZXMiLCJzdGF0ZSI6IkV4dHJlbWFkdXJhIiwiY291bnR5IjoiQmFkYWpveiIsImNpdHkiOiJDYXN0aWxibGFuY28iLCJwb3N0Y29kZSI6IjA2NjgwIiwic3RyZWV0IjoiQXZlbmlkYSBkZSBFeHRyZW1hZHVyYSIsImxvbiI6LTUuMDg5OTE0NSwibGF0IjozOS4yODcyMTEyLCJzdGF0ZV9jb2RlIjoiRVgiLCJmb3JtYXR0ZWQiOiJBdmVuaWRhIGRlIEV4dHJlbWFkdXJhLCAwNjY4MCBDYXN0aWxibGFuY28sIFNwYWluIiwiYWRkcmVzc19saW5lMSI6IkF2ZW5pZGEgZGUgRXh0cmVtYWR1cmEiLCJhZGRyZXNzX2xpbmUyIjoiMDY2ODAgQ2FzdGlsYmxhbmNvLCBTcGFpbiIsImNhdGVnb3JpZXMiOlsidG91cmlzbSIsInRvdXJpc20uYXR0cmFjdGlvbiIsInRvdXJpc20uYXR0cmFjdGlvbi5hcnR3b3JrIl0sImRldGFpbHMiOltdLCJkYXRhc291cmNlIjp7InNvdXJjZW5hbWUiOiJvcGVuc3RyZWV0bWFwIiwiYXR0cmlidXRpb24iOiLCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycyIsImxpY2Vuc2UiOiJPcGVuIERhdGFiYXNlIExpY2Vuc2UiLCJ1cmwiOiJodHRwczovL3d3dy5vcGVuc3RyZWV0bWFwLm9yZy9jb3B5cmlnaHQiLCJyYXciOnsib3NtX2lkIjo1NzI2MzY4MTc3LCJuYXR1cmFsIjoic2hydWIiLCJ0b3VyaXNtIjoiYXJ0d29yayIsIm9zbV90eXBlIjoibiJ9fSwiZGlzdGFuY2UiOjIyMTU0LCJwbGFjZV9pZCI6IjUxYThiZWYzOGIxMjVjMTRjMDU5YzNlMTJiNTZjM2E0NDM0MGYwMDEwM2Y5MDFiMTcxNTE1NTAxMDAwMDAwIn0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbLTUuMDg5OTE0NDk5OTk5OTk5LDM5LjI4NzIxMTIwMDE2NzM3XX19LHsidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7Im5hbWUiOiJNb251bWVudG8gYWwgQXBpY3VsdG9yIiwiY291bnRyeSI6IlNwYWluIiwiY291bnRyeV9jb2RlIjoiZXMiLCJzdGF0ZSI6IkV4dHJlbWFkdXJhIiwiY291bnR5IjoiQmFkYWpveiIsImNpdHkiOiJGdWVubGFicmFkYSBkZSBsb3MgTW9udGVzIiwic3RyZWV0IjoiUGFzZW8gZGUgbGEgQ29uc3RpdHVjacOzbiIsImxvbiI6LTQuOTM0Mzg0MiwibGF0IjozOS4xMzM3OTM3LCJzdGF0ZV9jb2RlIjoiRVgiLCJmb3JtYXR0ZWQiOiJNb251bWVudG8gYWwgQXBpY3VsdG9yLCBQYXNlbyBkZSBsYSBDb25zdGl0dWNpw7NuLCBGdWVubGFicmFkYSBkZSBsb3MgTW9udGVzLCBTcGFpbiIsImFkZHJlc3NfbGluZTEiOiJNb251bWVudG8gYWwgQXBpY3VsdG9yIiwiYWRkcmVzc19saW5lMiI6IlBhc2VvIGRlIGxhIENvbnN0aXR1Y2nDs24sIEZ1ZW5sYWJyYWRhIGRlIGxvcyBNb250ZXMsIFNwYWluIiwiY2F0ZWdvcmllcyI6WyJ0b3VyaXNtIiwidG91cmlzbS5hdHRyYWN0aW9uIiwidG91cmlzbS5hdHRyYWN0aW9uLmFydHdvcmsiXSwiZGV0YWlscyI6WyJkZXRhaWxzLmFydHdvcmsiXSwiZGF0YXNvdXJjZSI6eyJzb3VyY2VuYW1lIjoib3BlbnN0cmVldG1hcCIsImF0dHJpYnV0aW9uIjoiwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMiLCJsaWNlbnNlIjoiT3BlbiBEYXRhYmFzZSBMaWNlbnNlIiwidXJsIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0IiwicmF3Ijp7Im5hbWUiOiJNb251bWVudG8gYWwgQXBpY3VsdG9yIiwib3NtX2lkIjo1NzQ3Njk4NzE4LCJ0b3VyaXNtIjoiYXJ0d29yayIsIm9zbV90eXBlIjoibiIsImFydHdvcmtfdHlwZSI6InN0YXR1ZSJ9fSwiYXJ0d29yayI6eyJhcnR3b3JrX3R5cGUiOiJzdGF0dWUifSwiZGlzdGFuY2UiOjIyOTEyLCJwbGFjZV9pZCI6IjUxYjM5ODMzMzZjZmJjMTNjMDU5NzM0NGU3MjYyMDkxNDM0MGYwMDEwM2Y5MDExZWVjOTY1NjAxMDAwMDAwOTIwMzE2NGQ2ZjZlNzU2ZDY1NmU3NDZmMjA2MTZjMjA0MTcwNjk2Mzc1NmM3NDZmNzIifSwiZ2VvbWV0cnkiOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlstNC45MzQzODQxOTk5OTk5OTksMzkuMTMzNzkzNzAwMTQ1MjddfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsibmFtZSI6IlJvbGxvIGRlIFNhbnRhIEFuYSIsImNvdW50cnkiOiJTcGFpbiIsImNvdW50cnlfY29kZSI6ImVzIiwic3RhdGUiOiJFeHRyZW1hZHVyYSIsImNvdW50eSI6IkJhZGFqb3oiLCJjaXR5IjoiRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcyIsInN0cmVldCI6IkNhbGxlIFNhbnRhIEFuYSIsImxvbiI6LTQuOTM5NjUyMSwibGF0IjozOS4xMzMyNzI4LCJzdGF0ZV9jb2RlIjoiRVgiLCJmb3JtYXR0ZWQiOiJSb2xsbyBkZSBTYW50YSBBbmEsIENhbGxlIFNhbnRhIEFuYSwgRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcywgU3BhaW4iLCJhZGRyZXNzX2xpbmUxIjoiUm9sbG8gZGUgU2FudGEgQW5hIiwiYWRkcmVzc19saW5lMiI6IkNhbGxlIFNhbnRhIEFuYSwgRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcywgU3BhaW4iLCJjYXRlZ29yaWVzIjpbInRvdXJpc20iLCJ0b3VyaXNtLmF0dHJhY3Rpb24iLCJ0b3VyaXNtLmF0dHJhY3Rpb24uYXJ0d29yayJdLCJkZXRhaWxzIjpbImRldGFpbHMuYXJ0d29yayJdLCJkYXRhc291cmNlIjp7InNvdXJjZW5hbWUiOiJvcGVuc3RyZWV0bWFwIiwiYXR0cmlidXRpb24iOiLCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycyIsImxpY2Vuc2UiOiJPcGVuIERhdGFiYXNlIExpY2Vuc2UiLCJ1cmwiOiJodHRwczovL3d3dy5vcGVuc3RyZWV0bWFwLm9yZy9jb3B5cmlnaHQiLCJyYXciOnsibmFtZSI6IlJvbGxvIGRlIFNhbnRhIEFuYSIsIm9zbV9pZCI6NTc0NzY3NTQyNCwidG91cmlzbSI6ImFydHdvcmsiLCJvc21fdHlwZSI6Im4iLCJhcnR3b3JrX3R5cGUiOiJjb2x1bW4ifX0sImFydHdvcmsiOnsiYXJ0d29ya190eXBlIjoiY29sdW1uIn0sImRpc3RhbmNlIjoyMzEzNSwicGxhY2VfaWQiOiI1MThjNzhmYzI4MzRjMjEzYzA1OWY0MDg0NzE1MGY5MTQzNDBmMDAxMDNmOTAxMjA5MTk2NTYwMTAwMDAwMDkyMDMxMjUyNmY2YzZjNmYyMDY0NjUyMDUzNjE2ZTc0NjEyMDQxNmU2MSJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wy00LjkzOTY1MjEsMzkuMTMzMjcyODAwMTQ1MTldfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsibmFtZSI6Ik1vbnVtZW50byBhbCBUcmFiYWpvIGRlIGxhIEFwaWN1bHR1cmEiLCJjb3VudHJ5IjoiU3BhaW4iLCJjb3VudHJ5X2NvZGUiOiJlcyIsInN0YXRlIjoiRXh0cmVtYWR1cmEiLCJjb3VudHkiOiJCYWRham96IiwiY2l0eSI6IkZ1ZW5sYWJyYWRhIGRlIGxvcyBNb250ZXMiLCJzdHJlZXQiOiJDYWxsZSBTYW50YSBBbmEiLCJsb24iOi00LjkzOTUzNjgsImxhdCI6MzkuMTMzMjE4Nywic3RhdGVfY29kZSI6IkVYIiwiZm9ybWF0dGVkIjoiTW9udW1lbnRvIGFsIFRyYWJham8gZGUgbGEgQXBpY3VsdHVyYSwgQ2FsbGUgU2FudGEgQW5hLCBGdWVubGFicmFkYSBkZSBsb3MgTW9udGVzLCBTcGFpbiIsImFkZHJlc3NfbGluZTEiOiJNb251bWVudG8gYWwgVHJhYmFqbyBkZSBsYSBBcGljdWx0dXJhIiwiYWRkcmVzc19saW5lMiI6IkNhbGxlIFNhbnRhIEFuYSwgRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcywgU3BhaW4iLCJjYXRlZ29yaWVzIjpbInRvdXJpc20iLCJ0b3VyaXNtLmF0dHJhY3Rpb24iLCJ0b3VyaXNtLmF0dHJhY3Rpb24uYXJ0d29yayJdLCJkZXRhaWxzIjpbImRldGFpbHMuYXJ0d29yayJdLCJkYXRhc291cmNlIjp7InNvdXJjZW5hbWUiOiJvcGVuc3RyZWV0bWFwIiwiYXR0cmlidXRpb24iOiLCqSBPcGVuU3RyZWV0TWFwIGNvbnRyaWJ1dG9ycyIsImxpY2Vuc2UiOiJPcGVuIERhdGFiYXNlIExpY2Vuc2UiLCJ1cmwiOiJodHRwczovL3d3dy5vcGVuc3RyZWV0bWFwLm9yZy9jb3B5cmlnaHQiLCJyYXciOnsibmFtZSI6Ik1vbnVtZW50byBhbCBUcmFiYWpvIGRlIGxhIEFwaWN1bHR1cmEiLCJvc21faWQiOjU3NDc2NzU0MjUsInRvdXJpc20iOiJhcnR3b3JrIiwib3NtX3R5cGUiOiJuIiwiYXJ0d29ya190eXBlIjoic3RhdHVlIn19LCJhcnR3b3JrIjp7ImFydHdvcmtfdHlwZSI6InN0YXR1ZSJ9LCJkaXN0YW5jZSI6MjMxMzYsInBsYWNlX2lkIjoiNTFkMThkNTVlZjE1YzIxM2MwNTk2YjJiNzQ0ZjBkOTE0MzQwZjAwMTAzZjkwMTIxOTE5NjU2MDEwMDAwMDA5MjAzMjU0ZDZmNmU3NTZkNjU2ZTc0NmYyMDYxNmMyMDU0NzI2MTYyNjE2YTZmMjA2NDY1MjA2YzYxMjA0MTcwNjk2Mzc1NmM3NDc1NzI2MSJ9LCJnZW9tZXRyeSI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wy00LjkzOTUzNjgsMzkuMTMzMjE4NzAwMTQ1MTg2XX19LHsidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7Im5hbWUiOiJFc3RhdHVhIGRlIFNhbiBBbWJyb3NpbyIsImNvdW50cnkiOiJTcGFpbiIsImNvdW50cnlfY29kZSI6ImVzIiwic3RhdGUiOiJFeHRyZW1hZHVyYSIsImNvdW50eSI6IkJhZGFqb3oiLCJjaXR5IjoiRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcyIsInN0cmVldCI6IkNhbGxlIEVsIERvbWFkZXJvIiwibG9uIjotNC45MzkxMDY3LCJsYXQiOjM5LjEzMDA5MDYsInN0YXRlX2NvZGUiOiJFWCIsImZvcm1hdHRlZCI6IkVzdGF0dWEgZGUgU2FuIEFtYnJvc2lvLCBDYWxsZSBFbCBEb21hZGVybywgRnVlbmxhYnJhZGEgZGUgbG9zIE1vbnRlcywgU3BhaW4iLCJhZGRyZXNzX2xpbmUxIjoiRXN0YXR1YSBkZSBTYW4gQW1icm9zaW8iLCJhZGRyZXNzX2xpbmUyIjoiQ2FsbGUgRWwgRG9tYWRlcm8sIEZ1ZW5sYWJyYWRhIGRlIGxvcyBNb250ZXMsIFNwYWluIiwiY2F0ZWdvcmllcyI6WyJ0b3VyaXNtIiwidG91cmlzbS5hdHRyYWN0aW9uIiwidG91cmlzbS5hdHRyYWN0aW9uLmFydHdvcmsiXSwiZGV0YWlscyI6WyJkZXRhaWxzLmFydHdvcmsiXSwiZGF0YXNvdXJjZSI6eyJzb3VyY2VuYW1lIjoib3BlbnN0cmVldG1hcCIsImF0dHJpYnV0aW9uIjoiwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMiLCJsaWNlbnNlIjoiT3BlbiBEYXRhYmFzZSBMaWNlbnNlIiwidXJsIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0IiwicmF3Ijp7Im5hbWUiOiJFc3RhdHVhIGRlIFNhbiBBbWJyb3NpbyIsIm9zbV9pZCI6NTc0OTEwMzU0MiwidG91cmlzbSI6ImFydHdvcmsiLCJvc21fdHlwZSI6Im4iLCJhcnR3b3JrX3R5cGUiOiJzdGF0dWUifX0sImFydHdvcmsiOnsiYXJ0d29ya190eXBlIjoic3RhdHVlIn0sImRpc3RhbmNlIjoyMzQ0NCwicGxhY2VfaWQiOiI1MTYzZDFjZjJmYTVjMTEzYzA1OWJmOTEwY2NmYTY5MDQzNDBmMDAxMDNmOTAxYjY1YmFjNTYwMTAwMDAwMDkyMDMxNzQ1NzM3NDYxNzQ3NTYxMjA2NDY1MjA1MzYxNmUyMDQxNmQ2MjcyNmY3MzY5NmYifSwiZ2VvbWV0cnkiOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlstNC45MzkxMDY2OTk5OTk5OTksMzkuMTMwMDkwNjAwMTQ0NzNdfX0seyJ0eXBlIjoiRmVhdHVyZSIsInByb3BlcnRpZXMiOnsibmFtZSI6IkVzdGFjacOzbiBhYmFuZG9uYWRhIGRlIFNhbnRhIFF1aXRlcmlhIiwiY291bnRyeSI6IlNwYWluIiwiY291bnRyeV9jb2RlIjoiZXMiLCJzdGF0ZSI6IkNhc3RpbGUtTGEgTWFuY2hhIiwiY291bnR5IjoiVG9sZWRvIiwiY2l0eSI6IlB1ZXJ0byBkZSBTYW4gVmljZW50ZSIsInBvc3Rjb2RlIjoiNDU2NzIiLCJzdHJlZXQiOiJWw61hIFZlcmRlIGRlIGxhIEphcmEiLCJsb24iOi01LjAzMDczMTQsImxhdCI6MzkuNDkwMzg2OSwiZm9ybWF0dGVkIjoiRXN0YWNpw7NuIGFiYW5kb25hZGEgZGUgU2FudGEgUXVpdGVyaWEsIFbDrWEgVmVyZGUgZGUgbGEgSmFyYSwgNDU2NzIgUHVlcnRvIGRlIFNhbiBWaWNlbnRlLCBTcGFpbiIsImFkZHJlc3NfbGluZTEiOiJFc3RhY2nDs24gYWJhbmRvbmFkYSBkZSBTYW50YSBRdWl0ZXJpYSIsImFkZHJlc3NfbGluZTIiOiJWw61hIFZlcmRlIGRlIGxhIEphcmEsIDQ1NjcyIFB1ZXJ0byBkZSBTYW4gVmljZW50ZSwgU3BhaW4iLCJjYXRlZ29yaWVzIjpbInRvdXJpc20iLCJ0b3VyaXNtLnNpZ2h0cyIsInRvdXJpc20uc2lnaHRzLnJ1aW5lcyJdLCJkZXRhaWxzIjpbXSwiZGF0YXNvdXJjZSI6eyJzb3VyY2VuYW1lIjoib3BlbnN0cmVldG1hcCIsImF0dHJpYnV0aW9uIjoiwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMiLCJsaWNlbnNlIjoiT3BlbiBEYXRhYmFzZSBMaWNlbnNlIiwidXJsIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0IiwicmF3Ijp7Im5hbWUiOiJFc3RhY2nDs24gYWJhbmRvbmFkYSBkZSBTYW50YSBRdWl0ZXJpYSIsIm9zbV9pZCI6MTg2MDg3NjU2MywiaGlzdG9yaWMiOiJydWlucyIsIm9zbV90eXBlIjoibiIsImFiYW5kb25lZDpyYWlsd2F5Ijoic3RhdGlvbiJ9fSwiaGlzdG9yaWMiOnsidHlwZSI6InJ1aW5zIn0sImRpc3RhbmNlIjoyNDY2NiwicGxhY2VfaWQiOiI1MTU2ZDc1NzBkNzgxZjE0YzA1OTdkNWQ3OWZmYzRiZTQzNDBmMDAxMDNmOTAxMTNiOWVhNmUwMDAwMDAwMDkyMDMyNjQ1NzM3NDYxNjM2OWMzYjM2ZTIwNjE2MjYxNmU2NDZmNmU2MTY0NjEyMDY0NjUyMDUzNjE2ZTc0NjEyMDUxNzU2OTc0NjU3MjY5NjEifSwiZ2VvbWV0cnkiOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlstNS4wMzA3MzEzOTk5OTk5OTksMzkuNDkwMzg2OTAwMTk2NDA1XX19LHsidHlwZSI6IkZlYXR1cmUiLCJwcm9wZXJ0aWVzIjp7Im5hbWUiOiJDYXN0aWxsbyBkZSBIZXJyZXJhIGRlbCBEdXF1ZSIsImNvdW50cnkiOiJTcGFpbiIsImNvdW50cnlfY29kZSI6ImVzIiwic3RhdGUiOiJFeHRyZW1hZHVyYSIsImNvdW50eSI6IkJhZGFqb3oiLCJjaXR5IjoiSGVycmVyYSBkZWwgRHVxdWUiLCJwb3N0Y29kZSI6IjA2NjcwIiwic3RyZWV0IjoiQ2FycmV0ZXJhIGRlIFRhbGF2ZXJhIGRlIGxhIFJlaW5hIGEgQWxtYWTDqW4iLCJsb24iOi01LjAzMzcyNDA1NDkzMjU1MiwibGF0IjozOS4xNjA2Mjc3NSwic3RhdGVfY29kZSI6IkVYIiwiZm9ybWF0dGVkIjoiQ2FzdGlsbG8gZGUgSGVycmVyYSBkZWwgRHVxdWUsIENhcnJldGVyYSBkZSBUYWxhdmVyYSBkZSBsYSBSZWluYSBhIEFsbWFkw6luLCAwNjY3MCBIZXJyZXJhIGRlbCBEdXF1ZSwgU3BhaW4iLCJhZGRyZXNzX2xpbmUxIjoiQ2FzdGlsbG8gZGUgSGVycmVyYSBkZWwgRHVxdWUiLCJhZGRyZXNzX2xpbmUyIjoiQ2FycmV0ZXJhIGRlIFRhbGF2ZXJhIGRlIGxhIFJlaW5hIGEgQWxtYWTDqW4sIDA2NjcwIEhlcnJlcmEgZGVsIER1cXVlLCBTcGFpbiIsImNhdGVnb3JpZXMiOlsiYnVpbGRpbmciLCJidWlsZGluZy5oaXN0b3JpYyIsInRvdXJpc20iLCJ0b3VyaXNtLnNpZ2h0cyIsInRvdXJpc20uc2lnaHRzLmNhc3RsZSJdLCJkZXRhaWxzIjpbImRldGFpbHMud2lraV9hbmRfbWVkaWEiXSwiZGF0YXNvdXJjZSI6eyJzb3VyY2VuYW1lIjoib3BlbnN0cmVldG1hcCIsImF0dHJpYnV0aW9uIjoiwqkgT3BlblN0cmVldE1hcCBjb250cmlidXRvcnMiLCJsaWNlbnNlIjoiT3BlbiBEYXRhYmFzZSBMaWNlbnNlIiwidXJsIjoiaHR0cHM6Ly93d3cub3BlbnN0cmVldG1hcC5vcmcvY29weXJpZ2h0IiwicmF3Ijp7Im5hbWUiOiJDYXN0aWxsbyBkZSBIZXJyZXJhIGRlbCBEdXF1ZSIsIm9zbV9pZCI6NjA5OTI1NzYyLCJidWlsZGluZyI6InllcyIsImhpc3RvcmljIjoiY2FzdGxlIiwib3NtX3R5cGUiOiJ3Iiwid2lraWRhdGEiOiJRNTc1NzM2MCIsIndpa2lwZWRpYSI6ImVzOkNhc3RpbGxvIGRlIEhlcnJlcmEgZGVsIER1cXVlIn19LCJ3aWtpX2FuZF9tZWRpYSI6eyJ3aWtpZGF0YSI6IlE1NzU3MzYwIiwid2lraXBlZGlhIjoiZXM6Q2FzdGlsbG8gZGUgSGVycmVyYSBkZWwgRHVxdWUifSwiaGlzdG9yaWMiOnsidHlwZSI6ImNhc3RsZSJ9LCJkaXN0YW5jZSI6MjQ5MjIsInBsYWNlX2lkIjoiNTE1YTE4MDQ4Zjg4MjIxNGMwNTkzZWRjM2E3MzhmOTQ0MzQwZjAwMTAyZjkwMTgyYmE1YTI0MDAwMDAwMDA5MjAzMWQ0MzYxNzM3NDY5NmM2YzZmMjA2NDY1MjA0ODY1NzI3MjY1NzI2MTIwNjQ2NTZjMjA0NDc1NzE3NTY1In0sImdlb21ldHJ5Ijp7InR5cGUiOiJQb2ludCIsImNvb3JkaW5hdGVzIjpbLTUuMDMzNzI0MDU0OTMyNTQzLDM5LjE2MDYyNzc1MDE0OTE0Nl19fV19
+  recorded_at: Mon, 10 Jun 2024 19:29:20 GMT
 recorded_with: VCR 6.2.0
