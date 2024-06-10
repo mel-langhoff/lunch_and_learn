@@ -1,26 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/controllers/api/v1/tourist_sites_controller.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          null,
-          1,
-          null,
-          null
-        ]
-      },
-      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
-          null
-        ]
-      },
       "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/geoapify_service.rb": {
         "lines": [
           1,
@@ -65,29 +45,159 @@
           null
         ]
       },
-      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/serializers/tourist_site_serializer.rb": {
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/services/pexel_service_spec.rb": {
+        "lines": [
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/services/recipe_service_spec.rb": {
         "lines": [
           1,
-          1,
           null,
-          11,
           1,
           null,
           1,
-          10,
+          1,
+          null,
+          1,
           null,
           null,
           1,
-          10,
+          1,
+          1,
+          1,
+          null,
+          1,
           null,
           null,
           1,
-          10,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/recipe_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          20,
+          null,
+          20,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/spec/services/youtube_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/mel/Turing/3mod/projects/lunch_and_learn/app/services/youtube_service.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
           null,
           null
         ]
       }
     },
-    "timestamp": 1718040942
+    "timestamp": 1718046049
   }
 }

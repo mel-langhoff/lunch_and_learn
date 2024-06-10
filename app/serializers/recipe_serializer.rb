@@ -3,8 +3,21 @@ class RecipeSerializer
 
   set_id { nil }
   set_type :recipe
-  
-  # attributes :label, :url, :image
-   # :country
+
+  attribute :label do |object|
+    object[:label]
+  end
+
+  attribute :url do |object|
+    object[:url]
+  end
+
+  attribute :image do |object|
+    object[:image]
+  end
+
+  attribute :country do |object|
+    object[:country]
+  end
 
 end

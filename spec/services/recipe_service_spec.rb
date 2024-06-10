@@ -11,12 +11,12 @@ RSpec.describe RecipeService do
   it "#get_recipes_by_country" do
     VCR.use_cassette("recipes_by_country") do
       country = "Spain"
-      search = RecipeService.new.get_recipes_by_country(country)
+      search = RecipeService.get_recipes_by_country(country)
 
-      expect(search[:hits]).to be_an Array
+      expect(search).to be_an Array
+      #require 'pry'; binding.pry
 
-      recipe_data = search[:hits].first[:recipe]
-
+      recipe_data = search.first
       expect(recipe_data).to have_key :label
       expect(recipe_data).to have_key :url
       expect(recipe_data).to have_key :image
