@@ -24,7 +24,8 @@ RSpec.describe GeoapifyService do
       # Spain
       lat = 39.3260685
       lon = -4.8379791
-      search = GeoapifyService.get_tourist_sites(lat, lon)
+      coordinates = { lat: lat, lon: lon }
+      search = GeoapifyService.get_tourist_sites(coordinates)
 
       expect(search).to be_an(Array)
       expect(search.size).to be <= 10

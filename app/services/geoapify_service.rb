@@ -1,16 +1,20 @@
 class GeoapifyService
 
   def self.get_coordinates(country)
-    response = get_url("geocode/search", { text: country } )
+    response = get_url("v1/geocode/search", { text: country } )
     data = response[:features].first 
-    { lat: data[:properties][:lat], lon: data[:properties][:lon] }
+    coordinates = { lat: data[:properties][:lat], lon: data[:properties][:lon] }
+  
+    coordinates
   end
 
-  def self.get_tourist_sites(lat, lon)
+  def self.get_tourist_sites(coordinates)
     # The circle filter is used to define a circular geographic area for the search. The format for the circle filter is:
     # circle:<longitude>,<latitude>,<radius in m>
-    response = get_url("places?categories=tourism,tourism.information", { type: "shop", filter: "circle:#{lon},#{lat},3000", limit: 10 })
-    require 'pry'; binding.pry
+    lat = coordinates[:lat]
+    lon = coordinates[:lon]
+
+    response = get_url("v2/places", { type: "tourism", bias: "proximity:#{lon},#{lat}", limit: 10 })
     response[:features].map do |attribute|
       {
         name: attribute[:properties][:name],
@@ -23,7 +27,7 @@ class GeoapifyService
   private
 
   def self.conn
-    Faraday.new(url: 'https://api.geoapify.com/v1/') do |faraday|
+    Faraday.new(url: 'https://api.geoapify.com/') do |faraday|
       faraday.params[:apiKey] = Rails.application.credentials.geoapify[:api_key]
       # faraday.params[:page] = "1"
     end
