@@ -14,7 +14,6 @@ RSpec.describe RecipeService do
       search = RecipeService.get_recipes_by_country(country)
 
       expect(search).to be_an Array
-      #require 'pry'; binding.pry
 
       recipe_data = search.first
       expect(recipe_data).to have_key :label
