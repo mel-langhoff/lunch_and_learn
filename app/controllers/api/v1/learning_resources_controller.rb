@@ -4,7 +4,7 @@ class Api::V1::LearningResourcesController < ApplicationController
     country = params[:country]
     video = YoutubeService.get_video(country)
     images = PexelService.get_images(country)
-# require 'pry'; binding.pry
+
     if video.present? && images.any?
       learning_resource = LearningResource.new(country, video, images)
       render json: LearningResourceSerializer.new(learning_resource)

@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
       if user.save
         render json: UserSerializer.new(user), status: :created
       else
-        render json: { errors: user.errors }, status: :unprocessable_entity
+        render json: { errors: user.errors.full_messages.to_sentence }, status: :unprocessable_entity
       end
     else
       render json: { error: "Passwords do not match." }, status: :unprocessable_entity

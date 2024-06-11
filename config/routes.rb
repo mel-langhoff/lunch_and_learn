@@ -14,6 +14,8 @@ Rails.application.routes.draw do
       post "users", to: "users#create"
 
       post "sessions", to: "sessions#create"
+
+      resources :favorites, only: [:index, :create]
     end
   end
   # Defines the root path route ("/")
