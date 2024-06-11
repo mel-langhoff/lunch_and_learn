@@ -24,14 +24,11 @@ RSpec.describe "Sessions Api" do
     it "can create a favorite" do
       # params is used to pass parameters to the request body, not to the URL
       post "/api/v1/favorites", params: @favorite_params.to_json, headers: { 'Content-Type': 'application/json' }
-# require 'pry'; binding.pry
+
       expect(response).to have_http_status(:created)
 
       json_response = JSON.parse(response.body, symbolize_names: true)
-      expect(json_response[:data][:type]).to eq("favorite")
-      expect(json_response[:data][:attributes][:country]).to eq(@favorite_params[:country])
-      expect(json_response[:data][:attributes][:recipe_link]).to eq(@favorite_params[:recipe_link])
-      expect(json_response[:data][:attributes][:recipe_title]).to eq(@favorite_params[:recipe_title])
+      expect(json_response[:success]).to eq("Favorite saved successfully")
 
       favorite = Favorite.last
       expect(favorite.user).to eq(@user)
@@ -39,5 +36,11 @@ RSpec.describe "Sessions Api" do
       expect(favorite.recipe_link).to eq(@favorite_params[:recipe_link])
       expect(favorite.recipe_title).to eq(@favorite_params[:recipe_title])
     end
+  end
+
+  it "can show all a user's favorites" do
+    # can be sent as a query param for Endpoint 6 (reqs list)
+    get "/api/v1/favorites", params: { api_key: @user.api_key }
+
   end
 end
