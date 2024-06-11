@@ -17,6 +17,7 @@ RSpec.describe "Users Api" do
     it "can create a user" do
       # params is used to pass parameters to the request body, not to the URL
       # When you're sending a JSON payload in the body of a request, you need to specify the content type as JSON ('Content-Type': 'application/json') in the headers. Additionally, you need to convert your parameters to JSON format using .to_json before sending them in the request body.
+      # By including .to_json on your parameters and setting the content type header to 'application/json', you ensure that the parameters are sent in the request body as a JSON payload
       post "/api/v1/users", params: @user_params.to_json, headers: { 'Content-Type': 'application/json' } 
 
       expect(response).to have_http_status(:created)
