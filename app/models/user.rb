@@ -3,6 +3,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates_presence_of :name, :password
 
+  has_many :favorites
+
   has_secure_password
   validates_confirmation_of :password
 
