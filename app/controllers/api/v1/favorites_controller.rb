@@ -7,7 +7,7 @@ class Api::V1::FavoritesController < ApplicationController
       favorite = user.favorites.new(favorite_params)
 
       if favorite.save
-        render json: FavoriteSerializer.new(favorite_params), status: :created
+        render json: FavoriteSerializer.new(favorite), status: :created
       else
         render json: { errors: favorite.errors.full_messages.to_sentence }, status: :unprocessable_entity
       end

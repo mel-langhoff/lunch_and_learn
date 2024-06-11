@@ -10,12 +10,18 @@ RSpec.describe "Sessions Api" do
       password: "test",
       password_confirmation: "test"
     )
+
+    @session_params = 
+    { 
+      email: @user.email, 
+      password: "test" 
+    }
   end
 
   describe "/api/v1/sessions" do
     it "can create a session" do
       # params is used to pass parameters to the request body, not to the URL
-      post "/api/v1/sessions", params: { email: @user.email, password: "test" }
+      post "/api/v1/sessions", params: @session_params.to_json, headers: { 'Content-Type': 'application/json' } 
 
       expect(response).to have_http_status(:ok)
 
