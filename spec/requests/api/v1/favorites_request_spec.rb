@@ -71,6 +71,7 @@ RSpec.describe "Sessions Api" do
 
     # favorites = [{:country=>"Canada", :recipe_title=>"Poutine", :recipe_link=>"www.asdfghjkl.com", :created_at=>"2024-06-11T02:33:41.001Z"}, {:country=>"Spain", :recipe_title=>"Paella", :recipe_link=>"www.qwertyuiop.com", :created_at=>"2024-06-11T02:33:40.998Z"}]
     # favorites = [fave2, fave1]
+    # listed this way because of created_at?
     # fave2
     expect(favorites[0][:recipe_title]).to eq("Poutine")
     expect(favorites[0][:recipe_link]).to eq("www.asdfghjkl.com")
