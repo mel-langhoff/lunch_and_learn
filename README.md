@@ -1,4 +1,4 @@
-# Recipes and Learning Resources API
+# Lunch & Learn README
 
 This backend API connects to multiple external APIs to provide recipe and learning resources based on a specified country. It supports user registration, authentication, and the ability to favorite recipes.
 
